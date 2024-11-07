@@ -3,7 +3,7 @@ import { work, volunteer } from '../data/experiences.js';
 export default function ExperienceJourney() {
 
     return (
-        <div className="relative w-full px-8">
+        <div className="relative w-full px-0 md:px-8">
             <div className="flex flex-col gap-y-8 p-4 relative">
                 <div className="absolute left-4 top-0 bottom-0 w-1 bg-experience rounded-lg"></div>
                 <div className='border-b-4 border-experience w-fit'>
