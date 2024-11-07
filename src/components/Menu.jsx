@@ -29,10 +29,10 @@ export default function Menu() {
             <button
                 key={i}
                 onClick={() => {
-                    setSelected(() => selected.map((_, index) => index === i));
+                    setSelected((prevSelected) => prevSelected.map((_, index) => index === i));
                     setPage(i);
                 }}
-                className={`text-lg font-mono text-white py-2 pr-4 transition-all duration-300 ${selected[i] ? classesSelected[i] : classesHover[i]}`}
+                className={`text-lg font-mono text-white py-2 pr-4 transition-all duration-250 ${selected[i] ? classesSelected[i] : classesHover[i]}`}
             >
                 {name}
             </button>

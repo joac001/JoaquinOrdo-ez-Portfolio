@@ -13,6 +13,7 @@ export default {
 		colors: {
 			'background': '#1D1E1E',
 			'white': '#ffffff',
+			'gray': '#A0AEC0',
 			'primary': '#7DBFC2',
 			'secondary': '#303030',
 
@@ -22,7 +23,8 @@ export default {
 			'contact': '#909D8C',
 		},
 		backgroundImage: {
-			'animated-background': 'linear-gradient(to top right, #2d3748, #1e293b, #1a202c)',
+			'primary-background': 'linear-gradient(to top right, #2d3748, #1e293b, #1a202c)',
+			'secondary-background': 'linear-gradient(to bottom right, #2d3748, #1e293b, #1a202c)',
 		},
 	},
 	plugins: [],

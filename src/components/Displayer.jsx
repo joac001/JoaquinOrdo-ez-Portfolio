@@ -1,7 +1,10 @@
 import { selectedPage } from "../pageStore";
 import { useStore } from "@nanostores/react";
 
-import Experiences from "./Experiences";
+import ExperienceJourney from "./ExperienceJourney";
+import Technologies from "./Technologies";
+import Projects from "./Projects";
+import Contact from "./Contact";
 import { useEffect, useState } from "react";
 
 export default function Displayer() {
@@ -15,14 +18,14 @@ export default function Displayer() {
         3: "shadow-contact"
     }
     const [shadow, setShadow] = useState(displaing[0]);
-    const [content, setContent] = useState(<Experiences />);
+    const [content, setContent] = useState(<ExperienceJourney client:load />);
 
     useEffect(() => {
         switch (pageIndex) {
             case 0:
                 setShadow(displaing[0]);
                 document.title = "Experiences - Portfolio";
-                setContent(<Experiences />);
+                setContent(<ExperienceJourney client:load />);
                 break;
             case 1:
                 setShadow(displaing[1]);
@@ -32,12 +35,12 @@ export default function Displayer() {
             case 2:
                 setShadow(displaing[2]);
                 document.title = "Projects - Portfolio";
-                setContent(<Technologies />);
+                setContent(<Projects />);
                 break;
             case 3:
                 setShadow(displaing[3]);
                 document.title = "Contact - Portfolio";
-                setContent(<Technologies />);
+                setContent(<Contact />);
                 break;
             default:
                 break;
@@ -45,18 +48,11 @@ export default function Displayer() {
     }, [pageIndex]);
 
     return (
-        <div id="content" className="col-span-2 m-4 bg-secondary w-auto rounded-md">
-            <span className={`flex rounded-lg ${shadow} transition-all ease-in-out duration-200`}>
+        <div id="content" className="col-span-2 m-4 bg-secondary-background w-auto rounded-md">
+            <span className={`flex rounded-lg ${shadow} transition-all ease-in-out duration-300 p-8`}>
                 {content}
             </span>
         </div>
     );
 }
 
-function Technologies() {
-    return (
-        <span className="grid grid-cols-2 gap-4 w-full text-white font-sans p-4">
-            <h1 className="text-2xl font-mono font-bold col-span-2 underline decoration-4 decoration-primary">TECHNOLOGIES</h1>
-        </span>
-    );
-}

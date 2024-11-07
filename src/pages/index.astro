@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import presentation from "../assets/presentation.png";
-import Title from "../components/Title.astro";
 import Menu from "../components/Menu.jsx";
 import Displayer from "../components/Displayer.jsx";
 ---
@@ -17,7 +16,20 @@ import Displayer from "../components/Displayer.jsx";
 			<Image src={presentation} alt="presentation-gif" loading="eager" />
 		</span>
 		<span class="flex flex-col justify-evenly gap-y-10 items-start">
-			<Title />
+			<span class="grid grid-rows-2">
+				<h1
+					class="self-end text-white sm:text-6xl text-2xl transition-all ease-in-out duration-300"
+				>
+					Hello, I'm
+				</h1>
+
+				<h1
+					class="[text-shadow:_0px_0px_15px_#00BCD4] text-primary font-bold sm:text-8xl text-4xl"
+				>
+					Joaquin
+				</h1>
+			</span>
+
 			<Menu client:load />
 		</span>
 		<Displayer client:load />
