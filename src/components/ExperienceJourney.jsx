@@ -38,9 +38,9 @@ function ExperienceCard({ experience, index }) {
                     <div>
                         <h3 className="font-bold">{experience.title}</h3>
                         <p className="text-gray mb-2">
-                            {experience.start_date} - {experience.end_date}
+                            {experience.start_date} {experience.end_date ? ` - ${experience.end_date}` : ''}
                         </p>
-                        <p className='text-sm md:text-lg'>{experience.description}</p>
+                        <p className='text-sm md:text-lg'>{experience.description ? experience.description : ''}</p>
                         <div className="flex flex-wrap gap-2 mt-2">
                             <span
                                 className="px-2 py-1 rounded-full text-xs"

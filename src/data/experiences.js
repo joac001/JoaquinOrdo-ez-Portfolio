@@ -42,20 +42,20 @@ export const volunteer = [
         start_date: '2023',
         end_date: '',
         skills: [],
-        description: 'short description',
+        description: '',
     },
     {
         title: 'Hospice “Buen samaritano”',
         start_date: '2022',
         end_date: '',
         skills: [],
-        description: 'short description',
+        description: '',
     },
     {
         title: 'Sociedad San Juan, centro apostólico — Líder de jóvenes',
         start_date: '2020',
         end_date: '',
         skills: [],
-        description: 'short description',
+        description: '',
     }
 ];
