@@ -36,14 +36,14 @@ function ExperienceCard({ experience, index }) {
             <div className='p-4 min-w-46 rounded-md border-x-2 border-y-2 border-experience'>
                 <div className="flex items-center">
                     <div>
-                        <h3 className="font-bold">{experience.title}</h3>
-                        <p className="text-gray mb-2">
+                        <h3 className="font-bold pt-2">{experience.title}</h3>
+                        <p className="text-gray pb-2">
                             {experience.start_date} {experience.end_date ? ` - ${experience.end_date}` : ''}
                         </p>
                         <p className='text-sm md:text-lg'>{experience.description ? experience.description : ''}</p>
                         <div className="flex flex-wrap gap-2 mt-2">
                             <span
-                                className="px-2 py-1 rounded-full text-xs"
+                                className="py-2 rounded-full text-xs text-gray"
                             >
                                 {experience.skills.length > 0 ? 'Skills: ' : ''}
                                 {experience.skills.map((skill, skillIndex) => (
