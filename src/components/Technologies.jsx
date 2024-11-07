@@ -1,14 +1,21 @@
+import { technologies } from "../data/technologies.js";
+
 export default function Technologies() {
-    const n = 12
+
     return (
-        <span className="grid grid-cols-4 gap-4 w-full text-white font-sans p-4">
+        <span className="flex gap-10 flex-wrap w-full text-white font-sans justify-center items-center p-4">
             {
-                Array(n).fill().map((_, i) => (
-                    <span key={i} className="flex flex-col items-center justify-center">
-                        <span className="bg-primary w-16 h-16 rounded-full"></span>
-                        <span className="text-center">Technology</span>
-                    </span>
-                ))
+                technologies.map((tech, index) => {
+
+                    return (
+                        <span key={index} className="grid grid-rows-2 items-center justify-center m-2 w-20 h-20 gap-2">
+                            {
+                                <img src={`src/assets/technologies/${tech.icon}`} alt={tech.name} className="w-16" loading="eagerly" />
+                            }
+                            <span className="text-center text-sm font-semibold mt-1">{tech.name}</span>
+                        </span>
+                    );
+                })
             }
         </span>
     );

@@ -25,7 +25,7 @@ export default function Displayer() {
             case 0:
                 setShadow(displaing[0]);
                 document.title = "Experiences - Portfolio";
-                setContent(<ExperienceJourney client:load />);
+                setContent(<ExperienceJourney />);
                 break;
             case 1:
                 setShadow(displaing[1]);

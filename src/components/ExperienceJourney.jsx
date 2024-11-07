@@ -29,24 +29,26 @@ export default function ExperienceJourney() {
 function ExperienceCard({ experience, index }) {
     return (
         <div key={index} className='w-full flex items-center text-white'>
-
-            <div className="w-full h-1 mr-1 bg-experience rounded-lg flex items-center"><div className='w-8 h-8 rounded-full bg-experience'></div></div>
-            <div className='p-4 rounded-md transition-all duration-150 ease-in-out bg-[#044A6D] scale-100 hover:scale-110'>
+            <div className='flex items-center w-full'>
+                <div className='w-8 h-8 rounded-full border-x-2 border-y-2 border-experience'></div>
+                <div className="w-full h-1 bg-experience rounded-lg flex items-center"></div>
+            </div>
+            <div className='p-4 min-w-46 rounded-md border-x-2 border-y-2 border-experience'>
                 <div className="flex items-center">
                     <div>
                         <h3 className="font-bold">{experience.title}</h3>
                         <p className="text-gray mb-2">
                             {experience.start_date} - {experience.end_date}
                         </p>
-                        <p>{experience.description}</p>
+                        <p className='text-sm md:text-lg'>{experience.description}</p>
                         <div className="flex flex-wrap gap-2 mt-2">
                             <span
                                 className="px-2 py-1 rounded-full text-xs"
                             >
                                 {experience.skills.length > 0 ? 'Skills: ' : ''}
                                 {experience.skills.map((skill, skillIndex) => (
-                                    <span key={skillIndex} className="px-2 py-1 rounded-full text-xs">
-                                        {skill}
+                                    <span key={skillIndex}>
+                                        {skillIndex == 0 ? skill : `- ${skill}`}
                                     </span>
                                 ))}
                             </span>
