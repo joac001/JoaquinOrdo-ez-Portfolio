@@ -8,7 +8,7 @@ export default function Technologies() {
                     return (
                         <span key={index} className="grid grid-rows-2 items-center justify-center m-2 w-20 h-20 gap-2">
                             {
-                                <img src={`/assets/${tech.icon}`} alt={tech.name} className="w-16" loading="eagerly" />
+                                <img src={`./src/assets/${tech.icon}`} alt={tech.name} className="w-16" loading="eagerly" />
                             }
                             <span className="text-center text-sm font-semibold mt-1">{tech.name}</span>
                         </span>
