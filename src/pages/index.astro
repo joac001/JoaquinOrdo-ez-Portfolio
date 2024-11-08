@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import presentation from "../../public/assets/presentation.png";
 import Menu from "../components/Menu.jsx";
 import Displayer from "../components/Displayer.jsx";
+import Technologies from "../components/Technologies.astro";
 ---
 
 <Layout title="Portfolio">
@@ -32,6 +33,6 @@ import Displayer from "../components/Displayer.jsx";
 
 			<Menu client:load />
 		</span>
-		<Displayer client:load />
+		<Displayer Technologies={Technologies} client:load />
 	</main>
 </Layout>

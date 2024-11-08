@@ -2,12 +2,11 @@ import { selectedPage } from "../pageStore";
 import { useStore } from "@nanostores/react";
 
 import ExperienceJourney from "./ExperienceJourney";
-import Technologies from "./Technologies";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { useEffect, useState } from "react";
 
-export default function Displayer() {
+export default function Displayer({ Technologies }) {
 
     const pageIndex = useStore(selectedPage);
 
