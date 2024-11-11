@@ -10,7 +10,8 @@ export default function Technologies() {
             const newImage = `/public/assets/${image}`;
             return newImage;
         } catch (error) {
-            const newImage = `${baseUrl}/assets/${image}`;
+            const newImage = `/JoaquinOrdonez-Portfolio/assets/${image}`;
+            {/* https://joac001.github.io/JoaquinOrdonez-Portfolio/assets/reactjs.webp */ }
             return newImage;
         }
     }
