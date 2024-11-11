@@ -6,9 +6,11 @@ export default function Technologies() {
 
     function fetchImage(image) {
         try {
+            console.log('trying to fetch image from public folder', image);
             const newImage = `/public/assets/${image}`;
             return newImage;
         } catch (error) {
+            console.log('trying to fetch image from assets folder', image);
             const newImage = `${baseUrl}/assets/${image}`;
             return newImage;
         }
