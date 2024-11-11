@@ -13,6 +13,7 @@ export default {
 		colors: {
 			'background': '#1D1E1E',
 			'white': '#ffffff',
+			'black': '#000000',
 			'gray': '#A0AEC0',
 			'primary': '#7DBFC2',
 			'secondary': '#303030',
