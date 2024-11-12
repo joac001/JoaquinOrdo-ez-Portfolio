@@ -6,11 +6,10 @@ export default function Technologies() {
 
     function fetchImage(image) {
         try {
-            const newImage = `${baseUrl}assets/${image}`;
+            const newImage = `${baseUrl}assets/technologies/${image}`;
             return newImage;
         } catch (error) {
-            const newImage = `/JoaquinOrdonez-Portfolio/assets/${image}`;
-            {/* https://joac001.github.io/JoaquinOrdonez-Portfolio/assets/reactjs.webp */ }
+            const newImage = `/JoaquinOrdonez-Portfolio/assets/technologies/${image}`;
             return newImage;
         }
     }

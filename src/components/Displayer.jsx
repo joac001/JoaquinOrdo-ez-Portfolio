@@ -49,7 +49,7 @@ export default function Displayer() {
 
     return (
         <div id="content" className="col-span-2 m-4 bg-secondary-background w-auto rounded-md">
-            <span className={`flex rounded-lg ${shadow} transition-all ease-in-out duration-300 p-8`}>
+            <span className={`flex rounded-lg ${shadow} transition-all ease-in-out duration-300 p-8 overflow-hidden`}>
                 {content}
             </span>
         </div>
