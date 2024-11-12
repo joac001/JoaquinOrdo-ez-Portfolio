@@ -6,8 +6,7 @@ export default function Technologies() {
 
     function fetchImage(image) {
         try {
-            console.log(baseUrl);
-            const newImage = `/public/assets/${image}`;
+            const newImage = `${baseUrl}assets/${image}`;
             return newImage;
         } catch (error) {
             const newImage = `/JoaquinOrdonez-Portfolio/assets/${image}`;
@@ -19,7 +18,6 @@ export default function Technologies() {
     return (
         <span className="flex gap-10 flex-wrap w-full text-white font-sans justify-center items-center p-4">
             {
-
                 technologies.map((tech, index) => (
                     <span key={index} className="grid grid-rows-2 items-center justify-center m-2 w-20 h-20 gap-2">
                         <img
