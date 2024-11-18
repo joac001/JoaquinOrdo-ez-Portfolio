@@ -3,8 +3,8 @@ import { setPage } from "../pageStore";
 
 
 export default function Menu() {
-    const linksNames = ["Experience", "Technologies", "Projects", "Contact"];
-
+    {/*const linksNames = ["Experience", "Technologies", "Projects", "Contact"]; */ }
+    const linksNames = ["Experience", "Technologies", "Contact"];
     const classesHover = [
         "hover:border-l-4 hover:bg-experience hover:shadow-lg hover:shadow-[#90A6FF] hover:rounded-sm hover:pl-4",
         "hover:border-l-4 hover:bg-technologies hover:shadow-lg hover:shadow-[#72BF8C] hover:rounded-sm hover:pl-4",
@@ -19,7 +19,7 @@ export default function Menu() {
         "border-l-2 bg-contact shadow-lg shadow-[#909D8C] rounded-none pl-4",
     ];
 
-    const [selected, setSelected] = useState([true, false, false, false]);
+    const [selected, setSelected] = useState([true, false, false]);
 
     return (
 

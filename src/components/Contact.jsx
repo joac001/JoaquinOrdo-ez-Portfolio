@@ -1,5 +1,4 @@
 import { contact } from '../data/contact.js';
-import { useState } from 'react';
 
 export default function Contact() {
     const baseUrl = import.meta.env.BASE_URL;
@@ -42,11 +41,11 @@ export default function Contact() {
         <span className='flex flex-col gap-y-4 w-full justify-center items-center text-white'>
             <span id='snackbar' className='relative bottom-[50%] rounded-full px-4 py-2 bg-contact'>Copied succesfully!</span>
 
-            <span className='grid grid-cols-2 items-center text-center gap-y-10 gap-x-20 w-fit font-thin text-xl p-2'>
-                <a onClick={copyMailToClipboard} className='flex justify-center items-center gap-x-4 col-span-2 cursor-pointer hover:text-gray hover:border-gray'>
+            <span className='grid grid-cols-2 items-center text-center gap-y-10 gap-x-20 w-fit font-thin text-xl p-2 mb-12'>
+                <button onClick={copyMailToClipboard} className='flex justify-center items-center gap-x-4 col-span-2 cursor-pointer hover:text-gray hover:border-gray'>
                     <img src={fetchImage('copy.png')} alt="copy email" className='w-4' />
                     joacoordo@gmail.com
-                </a>
+                </button>
 
                 {contact.map((contact, index) => (
                     <span onClick={() => contactRedirect(contact.url)} key={index} className={`flex items-center justify-center gap-x-2 ${index == 2 ? 'col-span-2' : ''} cursor-pointer hover:text-gray hover:border-gray `}>
